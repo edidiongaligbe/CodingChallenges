@@ -1,3 +1,3 @@
 # CodingChallenges
 
-Codes for coding challenges.
+Solutions for coding challenges.
