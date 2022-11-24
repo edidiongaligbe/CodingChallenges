@@ -16,9 +16,26 @@
 
 //SOLUTION
 
-const stuffCandies = ( arr = []) =>{
-    if (arr.length === 0 ) return 'Empty array.'
-    arr.sort();
-    let maxNo = arr.length - 1;
-    
+const stuffCandies = ( arr = [], extra = 0) =>{
+    if (arr.length === 0 ) return 'Empty array.';
+    let maxNo = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(maxNo < arr[i]){
+            maxNo = arr[i]
+        }
+    }
+
+    let candies = [];
+    for(let i = 0; i < arr.length; i++){
+       if (arr[i] + extra > maxNo){
+        candies.push(1);
+       } else {
+        candies.push(0);
+       }
+    }
+    console.log(arr);
+    return candies;
 }
+
+let myArr = [8, 9, 0];
+console.log(stuffCandies(myArr, 3));
